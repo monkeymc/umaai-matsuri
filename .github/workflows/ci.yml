@@ -1,0 +1,29 @@
+# 骏大祭剧本仓 CI：需要把引擎仓检出到并列目录（默认 `../umaai_next`，仅作 path 依赖编译）。
+# 数据自持：引擎静态数据已拷入统一数据目录 `data/`（含双配置默认层），测试零参数即跑。
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout engine repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/umaai-next
+          path: umaai_next
+          token: ${{ secrets.ENGINE_REPO_TOKEN }}
+        continue-on-error: true
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: fmt
+        run: cargo fmt --all --check
+      - name: clippy
+        run: cargo clippy --all-targets -- -D warnings
+      - name: test
+        run: cargo test --release
