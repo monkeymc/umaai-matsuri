@@ -16,6 +16,8 @@
 - **S1 建仓完成**：五 crate 改名、依赖路径、引擎静态数据、CI 与文档骨架已落地。
 - **S0 机制核对进行中**：核心循环、回合坐标、结算门槛与数据表已登记在
   [`docs/plan/intake.md`](docs/plan/intake.md)；代码仍是 S1 占位，未按猜测实现剧本机制。
+- **S0 实机证据**：intake §5 的 12 个待确认问题已按实机抓包回填结论（5 条已确认、3 条推断、4 条未观测或未定），
+  证据见 [`docs/plan/evidence/capture_report.md`](docs/plan/evidence/capture_report.md)。
 - 剧本资产中的 `sample_resource` / `training_basic_value` / `sample_order` 均为 `STUB`，
   见 [`docs/plan/stubs.md`](docs/plan/stubs.md)。
 

@@ -10,6 +10,7 @@
 |---|---|---|
 | [`plan/scenario_dev_plan.md`](plan/scenario_dev_plan.md) | 开发计划：阶段状态 + 决策记录 + 待决事项 | 阶段推进、口径拍板 |
 | [`plan/intake.md`](plan/intake.md) | 接入包：情报位置、机制清单、数值清单、数据表清单、待确认问题 | S0 核对期间 |
+| [`plan/evidence/capture_report.md`](plan/evidence/capture_report.md) | 实机抓包证据：intake §5 各问题的规则检验、命中数与样例 | 新增实机样本时重新生成 |
 | [`plan/stubs.md`](plan/stubs.md) | 数值占位登记（`STUB` / `TBD`）：位置、来源、替换条件、基线影响 | 出现占位时 |
 | [`mechanism.md`](mechanism.md) | 机制文档：公式 / 流程 / 实现落点 / 测试对应 | 机制实现或修正 |
 | [`glossary.md`](glossary.md) | 术语单一事实源 + 口径与用语决定记录 | 每次口径决定 |
